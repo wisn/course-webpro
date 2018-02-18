@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title>
+      TP Modul 4 Nomor 3 B
+    </title>
+    <style type="text/css">
+      body {
+        color: #222;
+        cursor: default;
+        background-color: #efefef;
+      }
+
+      div[name=animals] {
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body class="body_1301160479">
+    <main>
+      <div class="app_1301160479">
+        <div name="alphabets"></div>
+
+        <div name="animals"></div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script>
+      const animals = [
+        "ANGSA",
+        "ANJING",
+        "ANOA",
+        "BABI",
+        "BADAK",
+        "BEBEK",
+        "CACING",
+        "CICAK",
+        "CAPUNG",
+        "DARA",
+        "DOMBA",
+        "DUYUNG",
+        "ELANG",
+        "ENTOK",
+        "E",
+        "F",
+        "F",
+        "F",
+        "GABUS",
+        "GARUDA",
+        "GAJAH",
+        "HAMSTER",
+        "HARIMAU",
+        "HIU",
+        "IGUANA",
+        "IKAN",
+        "ITIK",
+        "JALAK",
+        "JANGKRIK",
+        "JERAPAH",
+        "KADAL",
+        "KAKATUA",
+        "KAMBING",
+        "LANDAK",
+        "LEBAH",
+        "LUWAK",
+        "MACAN",
+        "MALEO",
+        "MERAK",
+        "NGENGAT",
+        "NILA",
+        "NYAMUK",
+        "ORANGUTAN",
+        "OSKAR",
+        "OWA",
+        "PANDA",
+        "PATIN",
+        "PAUS",
+        "Q",
+        "Q",
+        "Q",
+        "RAYAP",
+        "RUBAH",
+        "RUSA",
+        "SEMUT",
+        "SINGA",
+        "SIPUT",
+        "TAPIR",
+        "TERIPANG",
+        "TIKUS",
+        "ULAR",
+        "UNTA",
+        "ULAT",
+        "V",
+        "V",
+        "V",
+        "WALET",
+        "WERENG",
+        "WAUWAU",
+        "X",
+        "X",
+        "X",
+        "YUYU",
+        "Y",
+        "Y",
+        "ZEBRA",
+        "Z",
+        "Z",
+      ];
+
+      const show = e => {
+        const char = e.innerText;
+
+        let elm = $('div[name=animals]')[0];
+        elm.innerHTML = '';
+
+        animals.filter(x => x.substr(0, 1) === char).forEach(animal => {
+          const node = document.createElement('div');
+          node.appendChild(document.createTextNode('- ' + animal));
+
+          elm.appendChild(node);
+        });
+      };
+
+      $(document).ready(function() {
+        const alphabets = $('div[name=alphabets]')[0];
+
+        for (i = 65; i < 91; i++) {
+          const char = String.fromCharCode(i);
+
+          let button = document.createElement('button');
+          button.setAttribute('onclick', `javascript: show(this)`);
+          button.innerText = char;
+
+          alphabets.appendChild(button);
+        }
+      });
+    </script>
+  </body>
+</html>

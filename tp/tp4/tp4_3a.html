@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title>
+      TP Modul 4 Nomor 3 A
+    </title>
+    <style type="text/css">
+      body {
+        color: #222;
+        cursor: default;
+        background-color: #efefef;
+      }
+
+      div[name=animals] {
+        margin-top: 1em;
+      }
+        div[name=animals] div {
+          display: none;
+        }
+    </style>
+  </head>
+  <body class="body_1301160479">
+    <main>
+      <div class="app_1301160479">
+        <div name="alphabets"></div>
+
+        <div name="animals">
+          <div>- ANGSA</div>
+          <div>- ANJING</div>
+          <div>- ANOA</div>
+          <div>- BABI</div>
+          <div>- BADAK</div>
+          <div>- BEBEK</div>
+          <div>- CACING</div>
+          <div>- CICAK</div>
+          <div>- CAPUNG</div>
+          <div>- DARA</div>
+          <div>- DOMBA</div>
+          <div>- DUYUNG</div>
+          <div>- ELANG</div>
+          <div>- ENTOK</div>
+          <div>- E</div>
+          <div>- F</div>
+          <div>- F</div>
+          <div>- F</div>
+          <div>- GABUS</div>
+          <div>- GARUDA</div>
+          <div>- GAJAH</div>
+          <div>- HAMSTER</div>
+          <div>- HARIMAU</div>
+          <div>- HIU</div>
+          <div>- IGUANA</div>
+          <div>- IKAN</div>
+          <div>- ITIK</div>
+          <div>- JALAK</div>
+          <div>- JANGKRIK</div>
+          <div>- JERAPAH</div>
+          <div>- KADAL</div>
+          <div>- KAKATUA</div>
+          <div>- KAMBING</div>
+          <div>- LANDAK</div>
+          <div>- LEBAH</div>
+          <div>- LUWAK</div>
+          <div>- MACAN</div>
+          <div>- MALEO</div>
+          <div>- MERAK</div>
+          <div>- NGENGAT</div>
+          <div>- NILA</div>
+          <div>- NYAMUK</div>
+          <div>- ORANGUTAN</div>
+          <div>- OSKAR</div>
+          <div>- OWA</div>
+          <div>- PANDA</div>
+          <div>- PATIN</div>
+          <div>- PAUS</div>
+          <div>- Q</div>
+          <div>- Q</div>
+          <div>- Q</div>
+          <div>- RAYAP</div>
+          <div>- RUBAH</div>
+          <div>- RUSA</div>
+          <div>- SEMUT</div>
+          <div>- SINGA</div>
+          <div>- SIPUT</div>
+          <div>- TAPIR</div>
+          <div>- TERIPANG</div>
+          <div>- TIKUS</div>
+          <div>- ULAR</div>
+          <div>- UNTA</div>
+          <div>- ULAT</div>
+          <div>- V</div>
+          <div>- V</div>
+          <div>- V</div>
+          <div>- WALET</div>
+          <div>- WERENG</div>
+          <div>- WAUWAU</div>
+          <div>- X</div>
+          <div>- X</div>
+          <div>- X</div>
+          <div>- YUYU</div>
+          <div>- Y</div>
+          <div>- Y</div>
+          <div>- ZEBRA</div>
+          <div>- Z</div>
+          <div>- Z</div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script>
+      const show = elm => {
+        const char = elm.innerText;
+        const record = Array.from($('div[name=animals]')[0].children);
+
+        $('div[name=animals] div').hide();
+
+        record.filter(x => x.innerText.substr(2, 1) === char).forEach(x =>
+          x.style.display = 'block'
+        );
+      };
+
+      $(document).ready(function() {
+        const alphabets = $('div[name=alphabets]')[0];
+
+        for (i = 65; i < 91; i++) {
+          const char = String.fromCharCode(i);
+
+          let button = document.createElement('button');
+          button.setAttribute('onclick', `javascript: show(this)`);
+          button.innerText = char;
+
+          alphabets.appendChild(button);
+        }
+      });
+    </script>
+  </body>
+</html>

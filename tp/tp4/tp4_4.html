@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title>
+      TP Modul 4 Nomor 4
+    </title>
+    <style type="text/css">
+      body {
+        color: #222;
+        margin: 0;
+        cursor: default;
+        background-color: #efefef;
+      }
+
+      main {
+        position: relative;
+      }
+
+      img {
+        top: .5em;
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+
+      .borderline_1301160479 {
+        top: .5em;
+        left: 72em;
+        width: .5em;
+        height: 24em;
+        position: absolute;
+        background-color: #ff0000;
+      }
+    </style>
+  </head>
+  <body class="body_1301160479">
+    <main>
+      <div class="app_1301160479">
+        <img
+          src="http://www.free-icons-download.net/images/car-icon-13955.png"
+        >
+        <div class="borderline_1301160479"></div>
+
+        <div style="padding: 2em;"></div>
+
+        <button class="forward-1_1301160479">Maju 10 Pixel =&gt;</button>
+        <button class="forward-2_1301160479">Maju 1 Langkah =&gt;</button>
+        <button class="forward-3_1301160479">Maju 2 Langkah =&gt;</button>
+        <span style="padding: 1em"></span>
+        <button class="backward-1_1301160479">&lt;== Mundur 10 Pixel</button>
+        <button class="backward-2_1301160479">&lt;== Mundur 1 Langkah</button>
+        <button class="backward-3_1301160479">&lt;== Mundur 2 Langkah</button>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script>
+      $(document).ready(function() {
+        const car = $('img')[0];
+        car.style.left = '0px';
+
+        $('.forward-1_1301160479').click(function() {
+          const left = parseInt(car.style.left) + 10;
+
+          car.style.left = `${left <= 852 ? left : 852}px`;
+        });
+
+        $('.forward-2_1301160479').click(function() {
+          const left = parseInt(car.style.left) + 300;
+
+          car.style.left = `${left <= 852 ? left : 852}px`;
+        });
+
+        $('.forward-3_1301160479').click(function() {
+          const left = parseInt(car.style.left) + 600;
+
+          car.style.left = `${left <= 852 ? left : 852}px`;
+        });
+
+        $('.backward-1_1301160479').click(function() {
+          const left = parseInt(car.style.left) - 10;
+
+          car.style.left = `${left >= 0 ? left : 0}px`;
+        });
+
+        $('.backward-2_1301160479').click(function() {
+          const left = parseInt(car.style.left) - 300;
+
+          car.style.left = `${left >= 0 ? left : 0}px`;
+        });
+
+        $('.backward-3_1301160479').click(function() {
+          const left = parseInt(car.style.left) - 600;
+
+          car.style.left = `${left >= 0 ? left : 0}px`;
+        });
+      });
+    </script>
+  </body>
+</html>
