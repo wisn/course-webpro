@@ -5,7 +5,7 @@ One place for storing any web programming course tasks.
 
 ## Available Tasks
 
-- [Preliminary Task 4](tp4)
+- [Preliminary Task 4](tp/tp4)
 
 ## Warning
 
