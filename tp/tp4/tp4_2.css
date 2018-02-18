@@ -1,0 +1,41 @@
+/*! TP4_2CSS
+ * @package Web Programming Preliminary Test #4
+ * @author  Wisnu Adi Nurcahyo
+ * @license MIT License
+ * @warning Don't copy and paste my fuckin work. Feel free to use this as
+ *          reference for your own work.
+*/
+
+.body_1301160479 {
+  color: #222;
+  cursor: default;
+  background-color: #efefef;
+}
+
+.app_1301160479 {
+  width: 24em;
+  margin: 6em auto 0;
+}
+
+.form_1301160479 {
+  border: .125em solid #222;
+  padding: 1em;
+}
+
+strong {
+  color: #ff4444;
+}
+
+.message_1301160479 {
+  display: none;
+  margin-top: 1em;
+}
+
+table {
+  width: 100%;
+}
+
+table thead {
+  text-align: center;
+  font-weight: 900;
+}

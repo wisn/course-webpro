@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title>
+      TP Modul 4 Nomor 2
+    </title>
+    <link rel="stylesheet" type="text/css" href="./tp4_2.css">
+  </head>
+  <body class="body_1301160479">
+    <main>
+      <div class="app_1301160479">
+        <div class="form_1301160479">
+          <strong>Nama :</strong>
+          <input name="name" type="text" required>
+          <br><br>
+          <strong>NIM :</strong>
+          <input name="nim" type="text" required>
+          <br><br>
+          <strong>Kelas :</strong>
+          <input name="class" type="text" required>
+          <br><br>
+          <strong>Jenis Kelamin</strong>
+          <input name="gender" type="radio" value="M"> Laki-Laki
+          <input name="gender" type="radio" value="F"> Perempuan
+          <br><br>
+          <button>Simpan</button>
+          <div class="message_1301160479"></div>
+        </div>
+
+        <div style="padding: 1em;"></div>
+
+        <table border="1">
+          <thead>
+            <td>Nama</td>
+            <td>NIM</td>
+            <td>Kelas</td>
+            <td>Jenis Kelamin</td>
+            <td>Action</td>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script src="./tp4_2.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('button').click(function() {
+          const gender = $('input[name=gender]').filter((_, x) => x.checked);
+
+          if (gender.length < 1) {
+            message ('Jenis Kelamin belum dipilih...');
+          } else {
+            const nim = $('input[name=nim]')[0].value;
+            const name = $('input[name=name]')[0].value;
+            const class_ = $('input[name=class]')[0].value;
+            const record = {
+              name,
+
+              nim: parseInt(nim),
+              class: class_,
+              gender: gender[0].value,
+            };
+
+            add(record);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

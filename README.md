@@ -3,7 +3,7 @@
 A repository of web programming course at Telkom University.
 One place for storing any web programming course tasks.
 
-## Warn
+## Warning
 
 This repository created for educational purpose only.
 Don't copy and paste my work as your own work.
