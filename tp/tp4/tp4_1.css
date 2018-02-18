@@ -1,0 +1,78 @@
+/*! TP4_1CSS
+ * @package Web Programming Preliminary Test #4
+ * @author  Wisnu Adi Nurcahyo
+ * @license MIT License
+ * @warning Don't copy and paste my fuckin work. Feel free to use this as
+ *          reference for your own work.
+*/
+
+.body_1301160479 {
+  color: #222;
+  cursor: default;
+  background-color: #efefef;
+}
+
+.calculator_1301160479 {
+  width: 18em;
+  margin: 6em auto 0;
+  padding: 1em 1.5em;
+  background-color: #008080;
+}
+
+.row_1301160479 {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.column-1_1301160479 {
+  flex-grow: 1;
+}
+
+.column-2_1301160479 {
+  flex-grow: 16;
+}
+
+.button_1301160479 {
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  margin: .5em 0 0;
+  padding: 1em;
+  display: inline-block;
+  font-size: 16pt;
+  border-radius: .25em;
+  border-bottom: .25em solid #505050;
+}
+  .button_1301160479:not(:first-child) {
+    margin-left: .25em;
+  }
+  .button_1301160479:active {
+    margin-top: .75em;
+    border-bottom: 0;
+  }
+
+.black_1301160479 {
+  background-color: #222;
+}
+
+.grey_1301160479 {
+  background-color: #404040;
+}
+
+.green_1301160479 {
+  border-bottom: .25em solid #006600;
+  background-color: #00AA00;
+}
+
+.input_1301160479[type=text] {
+  color: #fff;
+  width: 95%;
+  margin: 0;
+  border: none;
+  display: block;
+  padding: .5em .25em;
+  font-size: 24pt;
+  text-align: right;
+}

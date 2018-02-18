@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title>
+      TP Modul 4 Nomor 1
+    </title>
+    <link rel="stylesheet" type="text/css" href="./tp4_1.css">
+  </head>
+  <body class="body_1301160479">
+    <main>
+      <div class="calculator_1301160479">
+        <input
+          disabled
+          type="text"
+          value="0"
+          class="grey_1301160479 input_1301160479"
+        >
+
+        <div class="row_1301160479">
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            7
+          </button>
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            8
+          </button>
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            9
+          </button>
+          <button
+            class="grey_1301160479 button_1301160479 column-1_1301160479"
+          >
+            -
+          </button>
+        </div>
+
+        <div class="row_1301160479">
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            4
+          </button>
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            5
+          </button>
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            6
+          </button>
+          <button
+            class="grey_1301160479 button_1301160479 column-1_1301160479"
+          >
+            X
+          </button>
+        </div>
+
+        <div class="row_1301160479">
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            1
+          </button>
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            2
+          </button>
+          <button
+            class="black_1301160479 button_1301160479 column-1_1301160479"
+          >
+            3
+          </button>
+          <button
+            class="grey_1301160479 button_1301160479 column-1_1301160479"
+          >
+            /
+          </button>
+        </div>
+
+        <div class="row_1301160479">
+          <button
+            class="black_1301160479 button_1301160479 column-2_1301160479"
+          >
+            0
+          </button>
+          <button
+            class="green_1301160479 button_1301160479 column-1_1301160479"
+          >
+            =
+          </button>
+          <button
+          <button
+            class="grey_1301160479 button_1301160479 column-1_1301160479"
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script src="./tp4_1.js"></script>
+    <script>
+      $(document).ready(function() {
+        let state = {
+          result: 0,
+          operation: '=',
+        };
+
+        const elm = $('.input_1301160479')[0];
+
+        $('.black_1301160479.button_1301160479').click(function() {
+          const val = parseInt($(this).text());
+
+          append (elm) (val);
+        });
+
+        $('.grey_1301160479.button_1301160479').click(function() {
+          const opr = $(this).text().trim();
+          const val = parseInt(elm.value);
+          const pair = { first: state.result, second: val };
+          const result = opr === '='
+            ? val
+            : operate (state.operation) (pair);
+
+          state.result = result;
+          state.operation = opr;
+
+          set (elm) (0);
+        });
+
+        $('.green_1301160479.button_1301160479').click(function() {
+          const val = parseInt(elm.value);
+          const pair = { first: state.result, second: val };
+          const result = operate (state.operation) (pair);
+
+          state.result = result;
+          state.operation = '=';
+
+          set (elm) (result);
+        });
+      });
+    </script>
+  </body>
+</html>
