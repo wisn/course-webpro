@@ -3,6 +3,10 @@
 A repository of web programming course at Telkom University.
 One place for storing any web programming course tasks.
 
+## Available Tasks
+
+- [Preliminary Task 4](tp4)
+
 ## Warning
 
 This repository created for educational purpose only.
