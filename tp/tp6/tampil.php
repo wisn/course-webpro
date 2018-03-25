@@ -22,6 +22,8 @@
 
 <?php if (isset($_POST['nilai'])): ?>
 
+<h3>rekap nilai</h3>
+
 <table border="1">
   <thead>
     <td>UTS</td>
